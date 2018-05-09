@@ -1,0 +1,9 @@
+<launch>
+  <param name="use_gui" value="true"/>
+  <!-- Load the 2wd URDF model into the parameter server -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find 2wd_robot_description)/urdf/2wd_robot.xacro'"/>
+   <!-- Start 3 nodes: joint_state_publisher, robot_state_publisher and rviz -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" required="true" />
+</launch>

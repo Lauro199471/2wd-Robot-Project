@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>2wd_robot_description</name>
+  <version>0.1.0</version>
+  <description>
+    The 2wd_robot_description package contains URDF examples for a 2-wheeled robot
+  </description>
+
+  <author>Carol Fairchild</author>
+  <maintainer email="lauro199471@gmail.com">Lauro Cabral</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend> 
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>xacro</exec_depend>
+</package>
