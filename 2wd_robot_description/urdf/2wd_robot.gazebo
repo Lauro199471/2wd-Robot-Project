@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot>
+
+    <gazebo reference="base_link">
+      <material>Gazebo/Blue</material>
+      <pose>0 0 0 0 0 0</pose>
+    </gazebo>
+
+    <gazebo reference="right_wheel">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="left_wheel">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+</robot>
