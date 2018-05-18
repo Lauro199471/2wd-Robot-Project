@@ -63,6 +63,19 @@
           <geometry>
             <sphere radius="0.04" />
           </geometry>
+          <!-- Gazebo Physics -->
+          <surface>
+            <friction>
+                <ode>
+                    <!-- "mu" is the Coulomb friction coefficient for the first friction direction -->
+                    <mu> 0 </mu>
+                    <!-- "mu2" is the friction coefficient for the second friction direction (perpendicular to the first friction direction) -->
+                    <mu2> 0 </mu2>
+                    <slip1> 1.0 </slip1>
+                    <slip2> 1.0 </slip2>
+                </ode>
+            </friction>
+          </surface>
         </collision>
     </link>
 
@@ -141,6 +154,9 @@
                 rpy="${wheel_r_offset} ${wheel_p_offset} ${wheel_ya_offset}" />
         <!-- Axis of revoltuion. Right hand rule says Y will be rotating  -->
         <axis xyz="0 1 0" rpy="0 0 0" />
+        <!-- <limit> (required only for revolute and prismatic joint)  -->
+        <!-- <effort> An attribute for enforcing the maximum joint effort (|applied effort| < |effort|)  -->
+
     </joint>
 
     <!-- Left wheel <-> Base -->

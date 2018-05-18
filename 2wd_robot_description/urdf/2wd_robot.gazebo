@@ -14,4 +14,18 @@
       <material>Gazebo/Grey</material>
     </gazebo>
 
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+     <alwaysOn>true</alwaysOn>
+     <updateRate>20</updateRate>
+     <leftJoint>joint_f_l_wheel</leftJoint>
+     <rightJoint>joint_f_r_wheel</rightJoint>
+     <wheelSeparation>0.5</wheelSeparation>
+     <wheelDiameter>0.4</wheelDiameter>
+     <torque>20</torque>
+     <commandTopic>cmd_vel</commandTopic>
+     <odometryTopic>odom</odometryTopic>
+     <odometryFrame>odom</odometryFrame>
+     <robotBaseFrame>base_link</robotBaseFrame>
+    </plugin>
+
 </robot>
